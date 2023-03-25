@@ -1,6 +1,7 @@
-class Account {
+abstract class Account {
   name: string;
   accountNumber: number;
+  balance: number = 20
 
   constructor(name: string, accountNumber: number) {
     this.name = name;
@@ -14,19 +15,9 @@ class Account {
   withdraw = () => {
     console.log("sacou");
   };
-}
-
-class Admin {
-  balance: number;
-
-  constructor(balance: number) {
-    this.balance = balance;
-  }
-
+  
   getValue = () => {
     console.log(this.balance);
   };
 }
 
-const newAccount: Account = new Account("Marcos", 1);
-console.log(newAccount);
