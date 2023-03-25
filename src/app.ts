@@ -30,5 +30,15 @@ class PeopleAccount extends Account {
     }
 }
 
+class CompanyAccount extends Account {
+  constructor(name: string, accountNumber: number){
+    super(name, accountNumber)
+  }
+
+  getLoan = () => {
+    console.log('emprestimo feito')
+  }
+}
+
 const newPeople: PeopleAccount = new PeopleAccount(1, 'Marcos', 1)
 console.log(newPeople)
