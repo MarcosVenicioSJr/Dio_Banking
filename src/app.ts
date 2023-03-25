@@ -21,3 +21,14 @@ abstract class Account {
   };
 }
 
+class PeopleAccount extends Account {
+    doc_number: number;
+
+    constructor(doc_number: number, name: string, accountNumber: number) {
+        super(name, accountNumber);
+        this.doc_number = doc_number;
+    }
+}
+
+const newPeople: PeopleAccount = new PeopleAccount(1, 'Marcos', 1)
+console.log(newPeople)
